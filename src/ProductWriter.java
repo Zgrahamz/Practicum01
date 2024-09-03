@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 import static java.nio.file.StandardOpenOption.CREATE;
 
-public class PersonGenerator {
+public class ProductWriter {
     public static void main(String[] args) {
         Scanner sca = new Scanner(System.in);
 
@@ -17,9 +17,8 @@ public class PersonGenerator {
         String ID = "";
         String fName = "";
         String lName = "";
-        String title = "";
         String rec = "";
-        int yob = 0;
+        double yob = 0;
 
         /*
         a.	ID (a String)
@@ -30,13 +29,12 @@ public class PersonGenerator {
         */
 
         do {
-            ID = SafeInput.getNonZeroLenString(sca, "Enter your ID (ex. 000001)");
-            fName = SafeInput.getNonZeroLenString(sca, "Enter your first name");
-            lName = SafeInput.getNonZeroLenString(sca, "Enter your last name");
-            title = SafeInput.getNonZeroLenString(sca, "Enter your title");
-            yob = SafeInput.getRangedInt(sca, "Enter your year of birth", 1, 9999);
+            ID = SafeInput.getNonZeroLenString(sca, "Enter product ID (ex. 000001)");
+            fName = SafeInput.getNonZeroLenString(sca, "Enter product name");
+            lName = SafeInput.getNonZeroLenString(sca, "Enter product description");
+            yob = SafeInput.getRangedDouble(sca, "Enter product cost", 1, 9999);
 
-            rec = ID + ", " + fName + ", " + lName + ", " + title + ", " + yob;
+            rec = ID + ", " + fName + ", " + lName + ", " + yob;
 
             System.out.println(rec);
 
@@ -86,4 +84,3 @@ public class PersonGenerator {
 
     }
 }
-

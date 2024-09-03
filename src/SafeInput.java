@@ -189,12 +189,12 @@ public class SafeInput
         {
             System.out.print("\n" + prompt + " [Y/N] ");
             response = pipe.nextLine();
-            if(response.equalsIgnoreCase("Y"))
+            if(response.equalsIgnoreCase("N"))
             {
                 gotAVal = true;
                 retVal = true;
             }
-            else if(response.equalsIgnoreCase("N"))
+            else if(response.equalsIgnoreCase("Y"))
             {
                 gotAVal = true;
                 retVal = false;
